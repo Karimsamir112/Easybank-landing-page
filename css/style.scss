@@ -587,11 +587,13 @@ height: 830px;
 		background-size: cover;
 		background-position: 0px 0px;
 	text-align: center;
-		left:-5%;
+		left:0%;
 		
 		img{
 			width: 450px;
 			height: 100%;
+			position:relative;
+			left:-5%;
 		}
 	}
 	
