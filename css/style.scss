@@ -1,0 +1,730 @@
+$green:hsl(136, 65%, 51%);
+$blue:hsl(192, 70%, 51%);
+$mainSize:18px;
+$transition:all 0.3s ease-in-out;
+
+@mixin buttons() {
+	
+	width: 170px;
+		height: 40px;
+		border-radius: 30px;
+		color:white;
+		background-image: linear-gradient(to right, $green , $blue);
+		border:1px solid white;
+		cursor: pointer;
+	transition: $transition;
+}
+
+@mixin buttonsHover(){
+	
+	@include buttons;
+	opacity: 0.7;
+		background-image: linear-gradient(to right, $blue , $green);
+}
+
+@mixin inside-burger() {
+	display: none;
+			visibility:visible;
+			z-index: 100000000000000;
+			padding-top: 30px;
+			position: absolute;
+			top:0;
+			left:0;
+			background-color: hsl(0, 0%, 98%);
+			width: 100%;
+			height: 350px;
+			animation: showdiv 0.5s ease-in-out 0s 1 normal forwards ;
+}
+
+@mixin logo() {
+	margin-top: 5px;
+		
+			margin-left: 20px;
+		height: 33px;
+		width: 170px;
+}
+
+@mixin close() {
+	
+	float: right;
+				cursor: pointer;
+			height: 25px;
+			width: 25px;
+				margin-right: 40px;
+	
+}
+
+body{
+font-size: $mainSize;
+	overflow-x: hidden;
+	font-weight: 300 , 400 , 700;
+font-family: 'Public Sans' , 'sans-serif';
+}
+
+
+h1{
+	font-size: $mainSize * 3;
+	color:#2d314d;
+	
+}
+h2{
+	font-size: $mainSize * 2;
+	color:#2d314d;
+}
+h3{
+	font-size: $mainSize * 1.5;
+	color:#2d314d;
+}
+h4{
+	font-size: $mainSize * 1.2;
+	color:#2d314d;
+	cursor: pointer;
+	transition: $transition;
+}
+h4:hover{
+	color:hsl(136, 65%, 51%);
+}
+p , h5{
+	color:hsl(233, 8%, 62%);
+
+}
+		
+		
+
+header{
+	position: fixed;
+	z-index: 10000000;
+	padding-top: 20px;
+	padding-right: 50px;
+	width: 100%;
+	height: 10%;
+	top:-29px;
+	left:0;
+	background-color: white;
+	margin-top: 30px;
+	display: flex;
+	/* justify-content: center;
+	column-gap: 80px; */
+	
+	img{
+		margin-top: 5px;
+		margin-left: 80px;
+		height: 30px;
+		width: 15%
+	}
+	
+	nav{
+		margin-top: 10px;
+		margin-left: 10%;
+	
+		li{
+			display: inline-block;
+			list-style-type: none;
+			
+			a{
+				margin-left: 30px;
+				text-decoration: none;
+				color:hsl(233, 8%, 62%);
+				transition: $transition;
+				
+				}
+				a:hover{
+					
+					text-decoration: none;
+				color:black;
+					
+					/* display:inline-block; */
+    border-bottom:4px solid hsl(136, 65%, 51%) ;
+					 /*border-image: linear-gradient(to right, blue , green); */
+    padding-bottom:25px;
+	
+				
+				}
+			
+		}
+	}
+	
+	button{
+		margin-left: 15%;
+		@include buttons;
+		
+	}
+	button:hover{
+		@include buttonsHover;
+		
+	}
+	
+	.burger{
+		display: none;
+		
+	}
+	
+	
+	.inside-burger , .inside-burger2{
+		
+		display: none;
+		visibility: hidden;
+		position: absolute;
+		
+	}
+	
+	}
+
+
+
+.next-generation{
+	width: 100%;
+	background-color: hsl(0, 0%, 98%);
+	margin-top: 90px;
+	padding-top: 80px;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	column-gap: 40px;
+	
+	
+	div:first-of-type{
+		background: url(../images/bg-intro-desktop.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: -50px -70px;
+		position: relative;
+		top:-200px;
+		left:10%;
+		
+		img{
+			width: 100%;
+			
+			height: 115%;
+			margin-left: 20px
+			
+		}
+	}
+	
+	div:last-of-type{
+		
+		margin-left: 100px;
+		margin-top: 50px;
+		button{
+			@include buttons;
+		}
+		button:hover{
+			@include buttonsHover;
+		}
+	}
+	
+	}
+	
+	
+	
+	
+.choose-easybank{
+	width: 100%;
+	height: 600px;
+	/* margin-top: -14%; */
+	position: relative;
+	top:60px;
+	background-color: hsl(220, 16%, 96%);
+	padding-top: 100px;
+	padding-left: 170px;
+	
+	div{
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		column-gap: 40px;
+		
+		img{
+			height: 70px;
+			width: 70px;
+			
+		}
+		
+		div{
+			display: block;
+			width: 20%;
+			
+		}
+	}
+}
+	
+
+	
+	
+.latest-articles{
+
+	background-color: hsl(0, 0%, 100%);
+	margin-top:20px;
+	padding-top: 100px;
+	padding-left: 170px;
+
+	div{
+		margin-top: 40px;
+		display: flex;
+		justify-content: center;
+		column-gap: 60px;
+		
+		
+		
+		div{
+			border:0.1px solid white;
+			border-radius: 5px;
+			box-shadow: 0.05px 0.05px 0px 0.05px  hsl(233, 8%, 62%);
+			display: block;
+			width: 25%;
+			
+			img{
+			
+			width:100%;
+			height: 200px;
+		}
+			
+			
+			
+		}
+		div:last-of-type{
+				box-shadow: 0px 0px 0px 0px  hsl(233, 8%, 62%);
+			}
+	}
+}
+	
+	
+	
+footer{
+	margin-top: 100px;
+	background-color: hsl(233, 26%, 24%);
+	height: 160px;
+	padding: 50px ;
+	display: flex;
+	
+	div:first-of-type{
+		
+		img{
+			height: 35px;
+		width: 150px;
+		}
+		
+		nav{
+			margin-top: 100px;
+			
+			
+			i{
+				display: inline-block;
+				color: white;
+				transition: $transition;
+				margin-left: 10px;
+				cursor: pointer;
+				
+			}
+			i:hover{
+				color:hsl(136, 65%, 51%);
+			}
+		}
+	}
+	
+	div:nth-of-type(2) , div:nth-of-type(3){
+		margin-left: 100px;
+		margin-top: -10px;
+	
+		nav{
+			
+			li{
+				display: block;
+				list-style-type: none;
+				margin-top: 20px;
+				
+				a{
+					text-decoration: none;
+					
+					transition: $transition;
+					/*color:hsl(233, 8%, 62%); */
+					color:  hsl(220, 16%, 96%);
+				}
+				a:hover{
+					
+					color:hsl(136, 65%, 51%);
+				}
+			}
+		}
+	}
+/*	div:nth-of-type(3) , div:nth-of-type(2) {
+		margin-left: 100px;
+	} */
+	
+	div:last-of-type{
+		margin-left: 25%;
+		
+		button{
+			@include buttons;
+			margin-top: 30px;
+		}
+		button:hover{
+			@include buttonsHover;
+		}
+		
+		h5{
+			position: relative;
+			top:40px;
+			color:hsl(233, 8%, 62%);
+			
+		}
+	}
+	
+	
+}
+	
+	
+@media (max-width:1000px){
+	
+	
+	header{
+		display: inline-block;
+		width: 95%;
+		
+		img{
+			
+			@include logo;
+		/*margin-top: 5px;
+		
+			margin-left: 20px;
+		height: 35px;
+		width: 130px; */
+	}
+		
+		nav{
+			display: none;
+		}
+		button{
+			display: none;
+		}
+		
+		.burger{
+			display: block;
+			cursor: pointer;
+			position: relative;
+			top:6px;
+			left:5px;
+			height: 20px;
+			width: 25px;
+			float: right
+			
+		}
+		
+		
+		.inside-burger{
+		@include inside-burger;
+		
+			
+			img:first-of-type{
+				
+				@include logo;
+			}
+			
+			img:last-of-type{
+				@include close;
+			}
+			
+			
+			nav{
+		        width: 85%;
+				margin-top: 50px;
+				display: block;
+				
+				li{
+                   	text-align: center;
+					list-style-type: none;
+					display: block;
+					margin-top: 30px;
+					
+					a{
+						color:hsl(233, 8%, 62%);
+						transition: $transition;
+						
+					}
+					#a1{
+						animation: putA 0.5s ease-in-out 0s 1 normal forwards ;
+					}
+					#a2{
+						animation: putA 0.7s ease-in-out 0s 1 normal forwards ;
+					}
+					#a3{
+						animation: putA 0.9s ease-in-out 0s 1 normal forwards ;
+					}
+					#a4{
+						animation: putA 1.1s ease-in-out 0s 1 normal forwards ;
+					}
+					#a5{
+						animation: putA 1.3s ease-in-out 0s 1 normal forwards ;
+					}
+					a:hover{
+						color:black;
+							 padding-bottom:10px;
+					}
+				 }
+			}
+			
+	}
+		
+		@keyframes showdiv{
+			
+			from{
+				margin-top: -300px;
+			}
+			to{
+				margin-top: 0px;
+			}
+		}
+		
+		@keyframes hidediv{
+			
+			from{
+				
+				margin-top: 0px;
+			}
+			to{
+				margin-top: -300px;
+			}
+		}
+		
+		@keyframes putA{
+			
+			from{
+				
+				margin-left: 100%;
+			}
+			to{
+				
+				
+				margin-left: 0%;
+			}
+		}
+		
+		@keyframes removeA{
+			
+			from{
+				
+				margin-left: 0%;
+			}
+			to{
+				
+				
+				margin-left: 120%;
+			}
+		}
+	
+		.inside-burger2 {
+			@include inside-burger;
+			animation: hidediv 0.5s ease-in-out 0s 1 normal forwards ;
+			
+			img:first-of-type{
+				@include logo;
+			}
+			
+			img:last-of-type{
+				@include close;
+			}
+			
+			
+			nav{
+		        width: 80%;
+				margin-top: 50px;
+				display: block;
+				
+				li{
+                   	text-align: center;
+					list-style-type: none;
+					display: block;
+					margin-top: 30px;
+					
+					a{
+						color:hsl(233, 8%, 62%);
+						transition: $transition;
+					
+					}
+					
+					#a10{
+						animation: removeA 0.1s ease-in-out 0s 1 normal forwards ;
+					}
+					#a20{
+						animation: removeA 0.2s ease-in-out 0s 1 normal forwards ;
+					}
+					#a30{
+						animation: removeA 0.3s ease-in-out 0s 1 normal forwards ;
+					}
+					#a40{
+						animation: removeA 0.4s ease-in-out 0s 1 normal forwards ;
+					}
+					#a50{
+						animation: removeA 0.5s ease-in-out 0s 1 normal forwards ;
+					}
+					
+					a:hover{
+						color:hsl(136, 65%, 51%)
+					}
+				 }
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+.next-generation{
+	width: 100%;
+	
+height: 800px;
+	display: block;
+	
+	
+	
+	
+	div:first-of-type{
+		background: url(../images/bg-intro-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 0px 0px;
+	text-align: center;
+		left:0%;
+		
+		img{
+			width: 450px;
+			height: 100%;
+		}
+	}
+	
+	div:last-of-type{
+		text-align: center;
+		margin-left: 0px;
+		margin-top: -200px;
+		
+	}
+	
+	}
+	
+	
+	
+		
+.choose-easybank{
+	
+	height: 1350px;
+	padding-left: 0px;
+	text-align: center;
+	
+	div{
+		margin-top: 50px;
+		display: block;
+		
+	
+		div{
+			width: 100%;
+			text-align: center;
+			
+		}
+	}
+}
+	
+	
+	
+		
+.latest-articles{
+	padding-left: 0px;
+	text-align: center;
+
+	div{
+		margin-top: 40px;
+		display: block;
+		
+		div{
+			display: block;
+			width: 100%;
+			text-align: center;
+			margin-top: 80px;
+			
+		}
+				
+		}
+		
+	
+}
+	
+	
+	
+	
+	
+	
+	
+		
+footer{
+	margin-top: 20px;
+	height: 550px;
+	padding: 80px;
+	display: block;
+	text-align: center;
+	
+	div:first-of-type{
+		
+	
+		
+		nav{
+			margin-top: 30px;
+			margin-bottom: 20px;
+			
+			
+			i{
+				font-size: 30px;
+				display: inline-block;
+				color: white;
+				transition: $transition;
+				margin-left: 20px;
+				cursor: pointer;
+				
+			}
+			
+		}
+	}
+	
+	div:nth-of-type(2){
+		margin-left: 0px;
+		margin-top: 50px;
+	}
+	div:nth-of-type(3){
+			margin-left: 0px;
+		margin-top: 20px;
+	
+	}
+
+	
+	div:last-of-type{
+		margin-left: 0px;
+		
+		button{
+			@include buttons;
+			margin-top: 60px;
+		}
+		
+		
+		h5{
+			position: relative;
+			top:20px;
+			font-size: 19px;
+		}
+	}
+	
+	
+}
+	
+	
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	
+
